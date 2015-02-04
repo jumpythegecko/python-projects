@@ -1,0 +1,364 @@
+print "Hello World"
+
+import random
+import Tkinter
+import tkMessageBox
+from Tkinter import *
+
+input = "none"
+output = ""
+changed = "q"
+key = 42
+
+
+
+random.seed(42);
+
+def wtn(x):
+    return {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+        'd': 4,
+        'e': 5,
+        'f': 6,
+        'g': 7,
+        'h': 8,
+        'i': 9,
+        'j': 10,
+        'k': 11,
+        'l': 12,
+        'm': 13,
+        'n': 14,
+        'o': 15,
+        'p': 16,
+        'q': 17,
+        'r': 18,
+        's': 19,
+        't': 20,
+        'u': 21,
+        'v': 22,
+        'w': 23,
+        'x': 24,
+        'y': 25,
+        'z': 26,
+        'A': 27,
+        'B': 28,
+        'C': 29,
+        'D': 30,
+        'E': 31,
+        'F': 32,
+        'G': 33,
+        'H': 34,
+        'I': 35,
+        'J': 36,
+        'K': 37,
+        'L': 38,
+        'M': 39,
+        'N': 40,
+        'O': 41,
+        'P': 42,
+        'Q': 43,
+        'R': 44,
+        'S': 45,
+        'T': 46,
+        'U': 47,
+        'V': 48,
+        'W': 49,
+        'X': 50,
+        'Y': 51,
+        'Z': 52,
+        ' ': 53,
+        '!': 54,
+        '@': 55,
+        '#': 56,
+        '$': 57,
+        '%': 58,
+        '^': 59,
+        '&': 60,
+        '*': 61,
+        '(': 62,
+        ')': 63,
+        '[': 64,
+        ']': 65,
+        '{': 66,
+        '}': 67,
+        '-': 68,
+        '_': 69,
+        '=': 70,
+        '+': 71,
+        '`': 72,
+        '~': 73,
+        '|': 75,
+        ';': 76,
+        ':': 77,
+        '"': 78,
+        ',': 79,
+        '<': 80,
+        '.': 81,
+        '>': 82,
+        '/': 83,
+        '?': 84,
+        '1': 85,
+        '2': 86,
+        '3': 87,
+        '4': 88,
+        '5': 89,
+        '6': 90,
+        '7': 91,
+        '8': 92,
+        '9': 93,
+        '0': 94,
+    }.get(x, 11153)
+
+def ntw(x):
+    return {
+        -28: "]",
+        -27: "{",
+        -26: "}",
+        -25: "-",
+        -24: "_",
+        -23: "=",
+        -22: "+",
+        -21: "`",
+        -20: "~",
+        -19: "|",
+        -18: ";",
+        -17: ":",
+        -16: "'",
+        -15: ",",
+        -14: "<",
+        -13: ".",
+        -12: ">",
+        -11: "/",
+        -10: "?",
+        -9: "1",
+        -8: "2",
+        -7: "3",
+        -6: "4",
+        -5: "5",
+        -4: "6",
+        -3: "7",
+        -2: "8",
+        -1: "9",
+        0: "0",
+        1: "a",
+        2: "b",
+        3: "c",
+        4: "d",
+        5: "e",
+        6: "f",
+        7: "g",
+        8: "h",
+        9: "i",
+        10: "j",
+        11: "k",
+        12: "l",
+        13: "m",
+        14: "n",
+        15: "o",
+        16: "p",
+        17: "q",
+        18: "r",
+        19: "s",
+        20: "t",
+        21: "u",
+        22: "v",
+        23: "w",
+        24: "x",
+        25: "y",
+        26: "z",
+        27: "A",
+        28: "B",
+        29: "C",
+        30: "D",
+        31: "E",
+        32: "F",
+        33: "G",
+        34: "H",
+        35: "I",
+        36: "J",
+        37: "K",
+        38: "L",
+        39: "M",
+        40: "N",
+        41: "O",
+        42: "P",
+        43: "Q",
+        44: "R",
+        45: "S",
+        46: "T",
+        47: "U",
+        48: "V",
+        49: "W",
+        50: "X",
+        51: "Y",
+        52: "Z",
+        53: " ",
+        54: "!",
+        55: "@",
+        56: "#",
+        57: "$",
+        58: "%",
+        59: "^",
+        60: "&",
+        61: "*",
+        62: "(",
+        63: ")",
+        64: "[",
+        65: "]",
+        66: "{",
+        67: "}",
+        68: "-",
+        69: "_",
+        70: "=",
+        71: "+",
+        72: "`",
+        73: "~",
+        75: "|",
+        76: ";",
+        77: ":",
+        78: "'",
+        79: ",",
+        80: "<",
+        81: ".",
+        82: ">",
+        83: "/",
+        84: "?",
+        85: "1",
+        86: "2",
+        87: "3",
+        88: "4",
+        89: "5",
+        90: "6",
+        91: "7",
+        92: "8",
+        93: "9",
+        94: "0",
+        95: "a",
+        96: "b",
+        97: "c",
+        98: "d",
+        99: "e",
+        100: "f",
+        101: "g",
+        102: "h",
+        103: "i",
+        104: "j",
+        105: "k",
+        106: "l",
+        107: "m",
+        108: "n",
+        109: "o",
+        110: "p",
+        111: "q",
+        112: "r",
+        113: "s",
+        114: "t",
+        115: "u",
+        116: "v",
+        117: "w",
+        118: "x",
+        119: "y",
+        120: "z",
+        121: "A",
+    }.get(x, " ")
+
+message = "I fart in your general direction. Your mother was a hamster, and your father smelt of elderberries. Now go away, or I shal taunt you another timea."
+
+number = 0
+lettera = ""
+newmessage = ""
+
+addn = 0
+
+for letter in message:
+    number = wtn(letter)
+    addn = random.random()
+    addn = addn*25
+    addn = round(addn)
+    number = number+addn
+    lettera = ntw(number)
+    newmessage = newmessage + lettera
+
+print ""
+print newmessage
+print ""
+print addn
+
+scrambled = "Y!mgJK|ky!DBvw_ukCyruC(hGzgeOxIF0:&CPG|AGunlt^zhI(j%oxCHxwv4'qBu Ruvz&kyPpuB;DtkzA-Kp%DyffuryCtsDFk|NGN{nE#lHyU2{sO|P_Hlty`GaCnQ|Twv|ypAvAxu]HpIpf0"
+
+unscrambled = ""
+letterb = ""
+
+random.seed(42)
+
+for letter in scrambled:
+    number = wtn(letter)
+    addn = random.random()
+    addn = addn*25
+    addn = round(addn)
+    number = number-addn
+    letterb = ntw(number)
+    unscrambled = unscrambled + letterb
+
+print ""
+print unscrambled
+
+
+top = Tkinter.Tk()
+top.geometry("500x350+300+200")
+# Code to add widgets will go here...
+L1 = Label(top, text="Your Message")
+L1.pack(side = TOP)
+E1 = Entry(top, bd =3, width =60)
+E1.pack(side = TOP)
+
+E2 = Entry(top, bd =3, width =60)
+E2.pack(side = BOTTOM)
+L2 = Label(top, text="Encrypted Message")
+L2.pack( side = BOTTOM)
+
+E3 = Entry(top, bd =3, width =30)
+E3.pack(side = RIGHT)
+L3 = Label(top, text="Key:  ")
+L3.pack( side = RIGHT)
+
+def helloCallBack():
+    key = int(E3.get())
+    output = ""
+    random.seed(key)
+    input = E1.get()
+    for letter in input:
+        number = wtn(letter)
+        addn = random.random()
+        addn = addn*25
+        addn = round(addn)
+        number = number+addn
+        changed = ntw(number)
+        output = output + changed
+    
+    tkMessageBox.showinfo( "Encrypted Message!", output)
+
+def helloCallBack2():
+    key = int(E3.get())
+    output = ""
+    random.seed(key)
+    input = E2.get()
+    for letter in input:
+        number = wtn(letter)
+        addn = random.random()
+        addn = addn*25
+        addn = round(addn)
+        number = number-addn
+        changed = ntw(number)
+        output = output + changed
+    
+    tkMessageBox.showinfo( "Encrypted Message!", output)
+
+
+B = Tkinter.Button(top, text ="Encrypt Message!", command = helloCallBack)
+B.pack()
+C = Tkinter.Button(top, text ="Un-Encrypt Message!", command = helloCallBack2)
+C.pack()
+top.mainloop()
